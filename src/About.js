@@ -21,6 +21,7 @@ function About() {
     color: 'white',
     backgroundColor: 'black',
     border: '1px solid yellow',
+    marginLeft: '20px',
   });
 
   const [isModalOpen, setModalOpen] = useState(false);
@@ -52,18 +53,23 @@ function About() {
   };
 
   return (
-    <div style={{ marginLeft: "15%", marginRight: "15%", color: "yellow" }}>
+    <div style={{ marginLeft: window.innerWidth > 500 ? "30%" : "15%", marginRight: window.innerWidth > 540 ? "30%" : "15%", color: "yellow" }}>
+
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <h1>#6968</h1>
         <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
           <img src="https://i.imgur.com/JWhDrcY.png" alt="NFT" style={{ maxWidth: '400px' }} />
-          <div style={{ border: '1px solid yellow', padding: '20px' }}>
+          <div style={{ border: '1px solid yellow', padding: '20px', marginLeft:"20px" }}>
             <h2>Bids</h2>
             {BidderList.map((bid, index) => (
               <div key={index}>
                 {`${1 + index}. ${bid.name} ${bid.amount}`}
+                <br/>
+                
               </div>
+              
             ))}
+            more
           </div>
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '20px' }}>
