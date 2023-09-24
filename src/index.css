@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.arenaLayout {
+
+  background-color: #483E33;
+  color: #FF9A20
+
+}
+
+.center {
+  text-align: center;
+}
+
+#root {
+  background-color: #483E33
+}
+
+.enterButton {
+  color: white;
+  background: black;
+  padding:15px;
+  border-radius:6px;
+}
+
+.enterButton:hover {
+  background:white;
+  color:black;
+}
